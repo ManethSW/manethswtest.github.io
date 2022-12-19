@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="This should describe what the web site is about and contain words people usually search on" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/FavIcons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Images/FavIcons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Images/FavIcons/favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="/Images/FavIcons/safari-pinned-tab.svg" color="#c38500" />
+    <link rel="shortcut icon" href="/Images/FavIcons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-config" content="/Images/FavIcons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>form</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/universal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check-box" />
+            <label for="check-box" class="menu-icon">
+                <i class="fa fa-bars"></i>
+            </label>
+            <a href="index.html" id="logo"><img src="Images/logo.webp" /></a>
+            <ul class="main-nav-bar">
+                <li><a href="index.html" id="active">Home</a></li>
+                <li><a href="teaplantations.html">Tea Plantations</a></li>
+                <li><a href="museum.html">Museum</a></li>
+                <li><a href="byproducts.html">By Products</a></li>
+                <li><a href="teasales1.html">Tea Sales 1</a></li>
+                <li><a href="teasales2.html">Tea Sales 2</a></li>
+                <li><a href="purchase&donate.html">Purchase & Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="white-space"></div>
+        <button class="loyalty-icon" id="open-loyalty-summary">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+        </button>
+        <div class="show-loyalty-points" id="show-loyalty-points">
+            <div class="loyalty-points">
+                <button class="close-icon" id="close-loyalty-summary">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h2>Loyalty Points</h2>
+                <div class="loyalty-points-summary">
+                    <p>You have accumulated a total of</p>
+                    <p id="current-loyalty-points">0pts</p>
+                </div>
+            </div>
+        </div>
+        <div class="thank-you-popup" id="thank-you-popup">
+            <div class="thank-you-popup-content">
+                <button class="close-icon" id="close-thank-you-popup">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h2>Thank You!</h2>
+                <p>Your form has been submitted successfully.</p>
+            </div>
+        </div>
+        <form id="form-main" class="input-section">
+            <div class="input-section">
+                <form id="form-1" role="form">
+                    <div class="input-section-1">
+                        <div class="personal-details-section">
+                            <div class="personal-details">
+                                <h2>Full Name</h2>
+                                <p class="validation-display" id="name-validation-display"></p>
+                                <div class="personal-details-input">
+                                    <input id="full-name" type="text">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="personal-details">
+                                <h2>Phone Number</h2>
+                                <p class="validation-display" id="phone-validation-display"></p>
+                                <div class="personal-details-input">
+                                    <input id="phone-number" type="number">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="personal-details">
+                                <h2>Email</h2>
+                                <p class="validation-display" id="email-validation-display"></p>
+                                <div class="personal-details-input">
+                                    <input id="email" type="text">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="personal-details">
+                                <h2>Confirm Email</h2>
+                                <p class="validation-display" id="email-confirm-validation-display"></p>
+                                <div class="personal-details-input">
+                                    <input id="email-confirm" type="text">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="date-gender">
+                            <div class="date">
+                                <h2>Date</h2>
+                                <p class="validation-display" id="date-validation-display"></p>
+                                <input id="date" type="date" value="2022-10-12">
+                            </div>
+                            <div class="gender">
+                                <h2>Gender</h2>
+                                <div class="duration">
+                                    <select id="gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    <span class="custom-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="border-1"></div>
+                <form id="form-2">
+                    <div class="input-section-2-3-4">
+                        <div class="input-section-2-3">
+                            <div class="input-section-2">
+                                <div class="duration">
+                                    <select id="duration">
+                                        <option value="threeHours" selected>3 hours</option>
+                                        <option value="halfDay">1/2 day</option>
+                                        <option value="fullDay">Full day</option>
+                                    </select>
+                                    <span class="custom-arrow"></span>
+                                </div>
+                                <div class="guests">
+                                    <div class="sl-adults">
+                                        <h2>SL Adult</h2>
+                                        <p class="ticket-cost" id="sl-adult-cost"></p>
+                                        <div class="container">
+                                            <button type="button" class="decrement" id="decrement-1">
+                                                <p>-</p>
+                                            </button>
+                                            <input id="slAdult-input" type="number" onKeyDown="return false" value="0"
+                                                disabled>
+                                            <button type="button" class="increment" id="increment-1">
+                                                <p>+</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="sl-child">
+                                        <h2>SL Child</h2>
+                                        <p class="ticket-cost" id="sl-child-cost"></p>
+                                        <div class="container">
+                                            <button type="button" class="decrement" id="decrement-2">
+                                                <p>-</p>
+                                            </button>
+                                            <input id="slChild-input" type="number" onKeyDown="return false" value="0"
+                                                disabled>
+                                            <button type="button" class="increment" id="increment-2">
+                                                <p>+</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="foriegn-adult">
+                                        <h2>Foriegn Adult</h2>
+                                        <p class="ticket-cost" id="f-adult-cost"></p>
+                                        <div class="container">
+                                            <button type="button" class="decrement" id="decrement-4">
+                                                <p>-</p>
+                                            </button>
+                                            <input id="fAdult-input" type="number" onKeyDown="return false" value="0"
+                                                disabled>
+                                            <button type="button" class="increment" id="increment-4">
+                                                <p>+</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="foriegn-child">
+                                        <h2>Foriegn Child</h2>
+                                        <p class="ticket-cost" id="f-child-cost"></p>
+                                        <div class="container">
+                                            <button type="button" class="decrement" id="decrement-5">
+                                                <p>-</p>
+                                            </button>
+                                            <input id="fChild-input" type="number" onKeyDown="return false" value="0"
+                                                disabled>
+                                            <button type="button" class="increment" id="increment-5">
+                                                <p>+</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="infant" id="test">
+                                        <h2>Infant</h2>
+                                        <p class="ticket-cost" id="infant-cost">FREE</p>
+                                        <div class="container">
+                                            <button type="button" class="decrement" id="decrement-3">
+                                                <p>-</p>
+                                            </button>
+                                            <input id="infant-input" type="number" onKeyDown="return false" value="0"
+                                                disabled>
+                                            <button type="button" class="increment" id="increment-3">
+                                                <p>+</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="border-2"></div>
+                            <div class="input-section-3">
+                                <div class="current-order">
+                                    <div class="current-order-heading">
+                                        <h2>Ticket Summary</h2>
+                                    </div>
+                                    <div class="current-order-body">
+                                        <div class="ticket-summary-container">
+                                            <h3>SL Adult(s)</h3>
+                                            <div>
+                                                <p id="sl-adult-no"></p>
+                                                <p id="sl-adult-total-cost"></p>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-summary-container">
+                                            <h3>SL Child(ren)</h3>
+                                            <div>
+                                                <p id="sl-child-no"></p>
+                                                <p id="sl-child-total-cost"></p>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-summary-container">
+                                            <h3>Foriegn Adult(s)</h3>
+                                            <div>
+                                                <p id="f-adult-no"></p>
+                                                <p id="f-adult-total-cost"></p>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-summary-container">
+                                            <h3>Foriegn Child(ren)</h3>
+                                            <div>
+                                                <p id="f-child-no"></p>
+                                                <p id="f-child-total-cost"></p>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-summary-container">
+                                            <h3>Infant(s)</h3>
+                                            <div>
+                                                <p id="infant-no"></p>
+                                                <p>0Lkr</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="current-order-footer">
+                                        <div>
+                                            <h2>Duration</h2>
+                                            <p id="current-duration"></p>
+                                        </div>
+                                        <div>
+                                            <h2>Total Cost</h2>
+                                            <p id="current-total-cost">r</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-order-button">
+                                    <button type="button" id="place-current-order">Add To Order</button>
+                                    <button type="button" id="add-fav">Add to Favourite</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="border-4"></div>
+                        <div class="input-section-3 input-section-4">
+                            <div class="current-order">
+                                <div class="current-order-heading">
+                                    <h2>Favourite Booking</h2>
+                                </div>
+                                <div class="current-order-body">
+                                    <div class="ticket-summary-container">
+                                        <h3>SL Adult(s)</h3>
+                                        <div>
+                                            <p id="fav-sl-adult-no"></p>
+                                            <p id="fav-sl-adult-total-cost"></p>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-summary-container">
+                                        <h3>SL Child(ren)</h3>
+                                        <div>
+                                            <p id="fav-sl-child-no"></p>
+                                            <p id="fav-sl-child-total-cost"></p>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-summary-container">
+                                        <h3>Foriegn Adult(s)</h3>
+                                        <div>
+                                            <p id="fav-f-adult-no"></p>
+                                            <p id="fav-f-adult-total-cost"></p>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-summary-container">
+                                        <h3>Foriegn Child(ren)</h3>
+                                        <div>
+                                            <p id="fav-f-child-no"></p>
+                                            <p id="fav-f-child-total-cost"></p>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-summary-container">
+                                        <h3>Infant(s)</h3>
+                                        <div>
+                                            <p id="fav-infant-no"></p>
+                                            <p>0Lkr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="current-order-footer">
+                                    <div>
+                                        <h2>Duration</h2>
+                                        <p id="fav-duration"></p>
+                                    </div>
+                                    <div>
+                                        <h2>Total Cost</h2>
+                                        <p id="fav-total-cost"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-order-button">
+                                <button type="button" id="add-fav-order">Order Favourite</button>
+                                <button type="button" id="remove-fav">Remove Favourite</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="border-1"></div>
+                <div class="overall-order">
+                    <h2 id="overall-order-title">Order Summay</h2>
+                    <div class="overall-date-gender-summary">
+                        <div class="overall-date-summary">
+                            <h2>Date</h2>
+                            <p id="overall-date-display">2022-10-10</p>
+                        </div>
+                        <div class="overall-gender-summary">
+                            <h2>Gender</h2>
+                            <p id="overall-gender-display">Male</p>
+                        </div>
+                    </div>
+                    <div class="overall-order-summary">
+                        <div class="overall-details-summary-1">
+                            <div class="overall-details">
+                                <h3>Name</h3>
+                                <p id="overall-name-display"></p>
+                            </div>
+                            <div class="overall-details">
+                                <h3>Email</h3>
+                                <p id="overall-email-display"></p>
+                            </div>
+                            <div class="overall-details">
+                                <h3>Phone</h3>
+                                <p id="overall-phone-display"></p>
+                            </div>
+                        </div>
+                        <div class="overall-details-summary-2">
+                            <div class="overall-cost">
+                                <h3>Overall Total Cost</h3>
+                                <h4 id="overall-total">0Lkr</h4>
+                            </div>
+                            <div>
+                                <button type="button" id="place-order">Place Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orders" id="orders"></div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <ul class="social-icons">
+            <li>
+                <a href="#" title="">
+                    <span class="icon fa fa-twitter"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <span class="icon fa fa-facebook"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <span class="icon fa fa-youtube"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <span class="icon fa fa-instagram"></span>
+                </a>
+            </li>
+        </ul>
+        <div class="about-container">
+            <h2>About</h2>
+            <p>
+                Promoting and bringing light to the Ceylon Tea Industry that has been established since the 1940s. Ceylon Tea has marked its' place in the world for its finest quality tea and
+                continuing to improve its' stanard along the way.
+            </p>
+        </div>
+        <div class="extra-links-container">
+            <a href="#">Terms of Use</a>
+            <p>·</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <p id="copyright">@ 2022 Maneth Weerasinghe</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/582a81fd83.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
